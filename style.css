@@ -1,3 +1,5 @@
+@layer base, theme;
+
 @layer base {
   *,
   *::before,
@@ -44,5 +46,67 @@
   h5,
   h6 {
     overflow-wrap: break-word;
+  }
+}
+
+@layer theme {
+  * {
+    --theme-hue: 240;
+    --theme-saturation: 80%;
+    --theme-lightness: 64%;
+
+    --theme-light: hsl(
+      var(--theme-hue) var(--theme-saturation) var(--theme-lightness)
+    );
+    --foreground1-light: hsl(var(--theme-hue) 8% 8%);
+    --foreground2-light: hsl(var(--theme-hue) 8% 12%);
+    --foreground3-light: hsl(var(--theme-hue) 8% 16%);
+    --foreground4-light: hsl(var(--theme-hue) 8% 24%);
+    --background1-light: hsl(var(--theme-hue) 8% 92%);
+    --background2-light: hsl(var(--theme-hue) 8% 98%);
+    --background3-light: hsl(var(--theme-hue) 8% 92%);
+    --background4-light: hsl(var(--theme-hue) 8% 98%);
+
+    --theme-dark: hsl(
+      var(--theme-hue) var(--theme-saturation) var(--theme-lightness)
+    );
+    --foreground1-dark: hsl(var(--theme-hue) 8% 98%);
+    --foreground2-dark: hsl(var(--theme-hue) 8% 92%);
+    --foreground3-dark: hsl(var(--theme-hue) 8% 88%);
+    --foreground4-dark: hsl(var(--theme-hue) 8% 80%);
+    --background1-dark: hsl(var(--theme-hue) 8% 8%);
+    --background2-dark: hsl(var(--theme-hue) 8% 12%);
+    --background3-dark: hsl(var(--theme-hue) 8% 16%);
+    --background4-dark: hsl(var(--theme-hue) 8% 24%);
+  }
+
+  :root {
+    color-scheme: light;
+
+    --theme: var(--theme-light);
+    --foreground1: var(--foreground1-light);
+    --foreground2: var(--foreground2-light);
+    --foreground3: var(--foreground3-light);
+    --foreground4: var(--foreground4-light);
+    --background1: var(--background1-light);
+    --background2: var(--background2-light);
+    --background3: var(--background3-light);
+    --background4: var(--background4-light);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+
+      --theme: var(--theme-dark);
+      --foreground1: var(--foreground1-dark);
+      --foreground2: var(--foreground2-dark);
+      --foreground3: var(--foreground3-dark);
+      --foreground4: var(--foreground4-dark);
+      --background1: var(--background1-dark);
+      --background2: var(--background2-dark);
+      --background3: var(--background3-dark);
+      --background4: var(--background4-dark);
+    }
   }
 }
