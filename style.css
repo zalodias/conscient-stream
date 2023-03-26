@@ -1,4 +1,4 @@
-@layer base, theme;
+@layer base, theme, layout;
 
 @layer base {
   *,
@@ -108,5 +108,18 @@
       --background3: var(--background3-dark);
       --background4: var(--background4-dark);
     }
+  }
+}
+
+@layer layout {
+  * {
+    --layout-container-padding: 16px;
+    --layout-container-width: 1280px;
+  }
+
+  body {
+    padding: var(--layout-container-padding);
+    max-width: var(--layout-container-width);
+    margin-inline: auto;
   }
 }
