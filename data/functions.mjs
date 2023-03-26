@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
 
 const readData = (database) => {
   const data = readFileSync(database, 'utf-8');
@@ -12,8 +12,13 @@ const writeData = (data, database, uniqueKeys = ['id']) => {
   }
 
   try {
-    const existingData = readFileSync(database, 'utf8');
-    const parsedData = existingData ? JSON.parse(existingData) : [];
+    let parsedData = [];
+
+    if (existsSync(database)) {
+      const existingData = readFileSync(database, 'utf8');
+      parsedData = existingData ? JSON.parse(existingData) : [];
+    }
+
     const isDuplicateData = parsedData.some((item) => {
       return uniqueKeys.some((key) => {
         return item[key] === data[key];
