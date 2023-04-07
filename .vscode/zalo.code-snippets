@@ -1,0 +1,14 @@
+{
+  "Create Component": {
+    "scope": "javascript",
+    "prefix": "zalo-component",
+    "body": [
+      "const ${1:Component} = () => {",
+      "\treturn `",
+      "\t\t<div>${1:Component}</div>",
+      "`;",
+      "};\n",
+      "export default ${1:Component};"
+    ]
+  }
+}
