@@ -121,3 +121,10 @@
     margin-inline: auto;
   }
 }
+
+@layer animation {
+  :root {
+    --transition-duration: 160ms;
+  }
+}
+
