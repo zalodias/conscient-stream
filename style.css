@@ -112,12 +112,10 @@
 }
 
 @layer layout {
-  * {
+  body {
     --layout-container-padding: 16px;
     --layout-container-width: 1280px;
-  }
 
-  body {
     padding: var(--layout-container-padding);
     max-width: var(--layout-container-width);
     margin-inline: auto;
