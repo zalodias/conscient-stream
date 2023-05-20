@@ -14,7 +14,6 @@ const route = (event) => {
 
 const handleLocation = () => {
   const path = window.location.pathname;
-  console.log(path);
   const route = routes[path]();
   document.getElementById("app").innerHTML = route;
 };
