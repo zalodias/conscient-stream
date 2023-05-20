@@ -1,9 +1,6 @@
 const Block = ({ text }) => {
   return `
-    <div
-      class="block"
-      contenteditable="true"
-    >
+    <div contenteditable>
       ${text}
     </div>
 `;
