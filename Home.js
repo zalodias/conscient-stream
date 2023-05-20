@@ -1,18 +1,7 @@
-import ConscientStream from './api.js';
-import Block from './components/Block.js';
-
-const streams = ConscientStream.getStreams();
+import Block from "./components/Block.js";
 
 const Home = () => {
-  return `
-    <div>
-      ${streams
-        .map(function (stream) {
-          return Block({ text: stream.text });
-        })
-        .join('')}
-    </div>
-`;
+  return `${Block({ text: "Home" })}`;
 };
 
 export default Home;
