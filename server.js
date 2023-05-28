@@ -25,6 +25,10 @@ const server = createServer((req, res) => {
       res.end(JSON.stringify(data));
     });
   }
+
+  if (res.headersSent === false) {
+    res.writeHead(404);
+    res.end(JSON.stringify({ message: "Not Found" }));
   }
 });
 
