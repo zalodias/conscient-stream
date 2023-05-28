@@ -24,7 +24,7 @@ export class Database {
 
   select(query) {
     return this.data.filter((record) => {
-      for (let key in query) {
+      for (const key in query) {
         if (record[key] !== query[key]) return false;
       }
       return true;
