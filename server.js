@@ -21,11 +21,10 @@ const server = createServer((req, res) => {
     req.on("end", () => {
       const data = JSON.parse(body);
       DB.insert(data);
-      res.writeHead(201, {
-        "Access-Control-Allow-Origin": "*",
-      });
-      res.end(JSON.stringify({ success: true }));
+      res.writeHead(201, { "Access-Control-Allow-Origin": "*" });
+      res.end(JSON.stringify(data));
     });
+  }
   }
 });
 
