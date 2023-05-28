@@ -5,13 +5,13 @@ const port = process.env.PORT || 8000;
 const DB = new Database("database.json");
 
 const server = createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/api/data") {
+  if (req.method === "GET" && req.url === "/api/streams") {
     const data = DB.select();
     res.writeHead(200, { "Access-Control-Allow-Origin": "*" });
     res.end(JSON.stringify(data));
   }
 
-  if (req.method === "POST" && req.url === "/api/data") {
+  if (req.method === "POST" && req.url === "/api/streams") {
     let body = "";
 
     req.on("data", (chunk) => {
