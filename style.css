@@ -1,4 +1,4 @@
-@layer base, theme, layout, application;
+@layer base, theme, layout, utilities;
 
 @layer base {
   *,
@@ -128,9 +128,12 @@
   }
 }
 
-@layer application {
-  [contenteditable] {
-    -webkit-tap-highlight-color: transparent;
-    outline: 0;
+@layer utilities {
+  .gap-5 {
+    gap: 20px;
+  }
+
+  .grid {
+    display: grid;
   }
 }
