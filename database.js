@@ -15,6 +15,7 @@ export class Database {
   insert(record) {
     const newRecord = {
       id: crypto.randomUUID(),
+      created_time: new Date().toISOString(),
       ...record,
     };
     this.data.push(newRecord);
