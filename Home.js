@@ -5,7 +5,7 @@ const streams = await getStreams();
 
 const Home = () => {
   return `
-    <div>
+    <div class="grid gap-5">
       ${streams
         .map((stream) => {
           return Block({ text: stream.text });
