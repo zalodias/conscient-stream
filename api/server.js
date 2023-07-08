@@ -35,3 +35,5 @@ const server = createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+export default server;

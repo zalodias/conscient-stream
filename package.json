@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch api/index.js"
+    "start": "node --watch api/server.js"
   },
   "keywords": [],
   "author": "",
