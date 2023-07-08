@@ -1,5 +1,5 @@
 import { createServer } from "http";
-import { Database } from "./database.js";
+import { Database } from "../database.js";
 
 const port = process.env.PORT || 8000;
 const DB = new Database("database.json");
