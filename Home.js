@@ -1,4 +1,4 @@
-import { getStreams } from "./api/api.js";
+import { getStreams } from "./api.js";
 import Block from "./components/Block.js";
 
 const streams = await getStreams();

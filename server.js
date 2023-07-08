@@ -1,5 +1,5 @@
 import { createServer } from "http";
-import { Database } from "../database.js";
+import { Database } from "./database.js";
 
 const port = process.env.PORT || 8000;
 const DB = new Database("database.json");
@@ -35,5 +35,3 @@ const server = createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-export default server;
